@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+env/
+
+# VS Code
+.vscode/
+
+# MLflow
+mlruns/
+
+# OS files
+.DS_Store
+Thumbs.db
+mlflow.db
