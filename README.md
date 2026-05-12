@@ -1,4 +1,4 @@
-# Customer Churn Prediction
+""## Customer Churn Prediction
 
 ## Descripción del proyecto
 
@@ -29,4 +29,5 @@ El objetivo del modelo es predecir si un cliente abandonará el servicio (`churn
 El dataset utilizado corresponde a un conjunto sintético de churn ubicado en:
 
 ```text
-data/raw/churn_sintetico.csv
+data/raw/churn_sintetico.csv""
+>>>>>>> ad3629c (finalize first partial deliverables)
