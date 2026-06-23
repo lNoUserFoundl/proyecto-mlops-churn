@@ -25,7 +25,7 @@ payload = {
 
 if st.button("Predecir"):
     response = requests.post(
-        "http://127.0.0.1:8000/predict",
+        "http://churn-api:8000/predict",  # Asegúrate de que diga 'churn-api'
         json=payload,
         timeout=10,
     )
