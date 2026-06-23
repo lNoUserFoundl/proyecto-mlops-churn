@@ -31,3 +31,14 @@ El dataset utilizado corresponde a un conjunto sintético de churn ubicado en:
 ```text
 data/raw/churn_sintetico.csv""
 >>>>>>> ad3629c (finalize first partial deliverables)
+
+## Segunda Entrega - Despliegue Local con Docker
+
+### Requisitos previos
+* Docker Desktop instalado y en ejecución.
+
+### Instrucciones para ejecutar la aplicación
+1. Clone el repositorio y sitúese en la raíz del proyecto.
+2. Ejecute el siguiente comando en la terminal para compilar las imágenes e iniciar los servicios de FastAPI y Streamlit:
+   ```bash
+   docker-compose up --build

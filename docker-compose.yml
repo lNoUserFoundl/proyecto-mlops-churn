@@ -1,0 +1,24 @@
+version: "3.9"
+
+services:
+  churn-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: churn-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./models:/app/models
+    command: uvicorn src.api:app --host 0.0.0.0 --port 8000
+
+  churn-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: churn-app
+    ports:
+      - "8501:8501"
+    depends_on:
+      - churn-api
+    command: streamlit run app.py --server.port 8501 --server.address 0.0.0.0
