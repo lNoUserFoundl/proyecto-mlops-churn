@@ -1,36 +1,29 @@
-""## Customer Churn Prediction
+# Customer Churn Prediction - AndesLink S.A.
 
 ## Descripción del proyecto
+Este proyecto implementa un pipeline de Machine Learning orientado a la predicción de churn (abandono) de clientes en un contexto de telecomunicaciones para la empresa AndesLink Servicios Digitales S.A.
 
-Este proyecto implementa un pipeline básico de Machine Learning orientado a la predicción de churn de clientes en un contexto de telecomunicaciones.
-
-El objetivo consiste en identificar clientes con probabilidad de abandonar el servicio utilizando técnicas de clasificación binaria supervisada.
-
-El proyecto fue desarrollado como parte de una primera entrega orientada a entrenamiento, reproducibilidad y serialización de modelos dentro de un flujo MLOps inicial.
+El objetivo consiste en identificar clientes con probabilidad de abandonar el servicio utilizando técnicas de clasificación binaria supervisada. El desarrollo integra las prácticas de MLOps requeridas para el entrenamiento, la serialización, el despliegue local en contenedores y la automatización de pruebas unitarias.
 
 ---
 
-# Problema de negocio
-
-La pérdida de clientes (customer churn) representa un problema relevante para empresas de servicios por sus costos asociados de adquisición y retención.
+## Problema de negocio
+La pérdida de clientes representa un problema relevante para empresas de servicios por sus costos asociados de adquisición y retención.
 
 El objetivo del modelo es predecir si un cliente abandonará el servicio (`churn = 1`) o permanecerá activo (`churn = 0`) a partir de variables relacionadas con:
-- antigüedad,
-- facturación,
-- comportamiento de uso,
-- soporte técnico,
-- productos contratados,
-- características del servicio.
+- Antigüedad en meses.
+- Facturación y cargos mensuales/totales.
+- Comportamiento de uso y consumo de datos.
+- Interacciones con soporte técnico y pagos atrasados.
+- Productos contratados y características del servicio.
 
 ---
 
-# Dataset
+## Dataset
+El dataset utilizado corresponde a un conjunto sintético de churn ubicado en la ruta:
+`data/raw/churn_sintetico.csv`
 
-El dataset utilizado corresponde a un conjunto sintético de churn ubicado en:
-
-```text
-data/raw/churn_sintetico.csv""
->>>>>>> ad3629c (finalize first partial deliverables)
+---
 
 ## Segunda Entrega - Despliegue Local con Docker
 
@@ -39,6 +32,6 @@ data/raw/churn_sintetico.csv""
 
 ### Instrucciones para ejecutar la aplicación
 1. Clone el repositorio y sitúese en la raíz del proyecto.
-2. Ejecute el siguiente comando en la terminal para compilar las imágenes e iniciar los servicios de FastAPI y Streamlit:
+2. Ejecute el siguiente comando en la terminal para compilar las imágenes e iniciar los servicios en simultáneo (FastAPI y Streamlit):
    ```bash
    docker-compose up --build
